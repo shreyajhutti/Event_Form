@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+        
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        
+<!-- css file -->
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="text">Event Registration Form</div>
+            <form id="myForm" onsubmit="return handleSubmit()" >
+                <div class="form-row">
+                    <div class="input-data">
+                        <input type="text" id="fname">
+                        <div class="underline"></div>
+                        <label for="fname">First Name</label>  
+                    </div>
+                    <div class="input-data">
+                        <input type="text" id="lname">
+                        <div class="underline"></div>
+                        <label for="lname">Last Name</label>  
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-data">
+                        <input type="text" id="email">
+                        <div class="underline"></div>
+                        <label for="email">Email</label>  
+                    </div>
+                    <div class="input-data">
+                        <input type="tel" id="contact">
+                        <div class="underline"></div>
+                        <label for="contact">Contact</label>  
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-data">
+                        <input type="text" id="college">
+                        <div class="underline"></div>
+                        <label for="college">College</label>  
+                    </div>
+                    <div class="input-data" >
+                        <input type="text" id="event">
+                        <div class="underline"></div>
+                        <label for="event">Name of Event</label>  
+                    </div>
+                </div>
+                <div class="form-row submit-btn">
+                    <div class="input-data">
+                        <div class="inner"></div> 
+                        <input type="submit" value="submit">
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <!-- javascript-->
+        <script>
+            function handleSubmit(){
+                var fname = document.getElementById("fname").value;
+                var lname = document.getElementById("lname").value;
+                var email = document.getElementById("email").value;
+                var contact = document.getElementById("contact").value;
+                var college = document.getElementById("college").value;
+                var event = document.getElementById("event").value;
+                
+                localStorage.setItem("fname", fname);
+                localStorage.setItem("lname", lname);
+                localStorage.setItem("email", email);
+                localStorage.setItem("contact", contact);
+                localStorage.setItem("college", college);
+                localStorage.setItem("event", event);
+                
+                window.location.href = "new_page.html";
+                
+                return false;
+            }
+        </script>
+    </body>
+</html>

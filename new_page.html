@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Your Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+            <h3>Details that you entered:</h3>
+            <ul>
+                <li>
+                    First name: 
+                    <span id="fname">null</span> 
+                </li>
+                <li>
+                    Last name: 
+                    <span id="lname">null</span> 
+                </li>
+                <li>
+                    Email: 
+                    <span id="email">null</span> 
+                </li>
+                <li>
+                    Contact: 
+                    <span id="contact">null</span> 
+                </li>
+                <li>
+                    College: 
+                    <span id="college">null</span> 
+                </li>
+                <li>
+                    Name of Event: 
+                    <span id="event">null</span> 
+                </li>
+            </ul>
+        </div>
+        <script>
+            var fname = localStorage.getItem("fname");
+            var lname = localStorage.getItem("lname");
+            var email = localStorage.getItem("email");
+            var contact = localStorage.getItem("contact");
+            var college = localStorage.getItem("college");
+            var event = localStorage.getItem("event");
+            
+            document.getElementById("fname").innerHTML = fname;
+            document.getElementById("lname").innerHTML = lname;
+            document.getElementById("email").innerHTML = email;
+            document.getElementById("contact").innerHTML = contact;
+            document.getElementById("college").innerHTML = college;
+            document.getElementById("event").innerHTML = event;
+            
+            localStorage.clear();
+        </script>
+    </body>
+</html>
